@@ -1,0 +1,154 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7fa;
+    background-image: url('background-pattern.png'); /* Add your preferred background pattern image here */
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: #343a40;
+}
+
+header {
+    background-color: #007BFF;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.8em;
+    font-family: 'Arial Black', sans-serif;
+}
+
+header p {
+    margin-top: 15px;
+    font-size: 1.3em;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.left-column {
+    width: 25%;
+    padding-right: 20px;
+    border-right: 2px solid #007BFF;
+}
+
+.right-column {
+    width: 75%;
+    padding-left: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 15px 0;
+}
+
+nav ul li a {
+    color: #007BFF;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #0056b3;
+}
+
+section {
+    margin-bottom: 50px;
+    padding: 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: 2em;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 10px;
+}
+
+#medication-tracker input, #symptom-form input, #reminder-form input, #kit-form input[type="text"], #kit-form input[type="checkbox"], #kit-form button, #patient-form input, #patient-form textarea, #patient-form button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+}
+
+#kit-form button, #reminder-form button, #patient-form button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 12px;
+    transition: background-color 0.3s ease;
+}
+
+#kit-form button:hover, #reminder-form button:hover, #patient-form button:hover {
+    background-color: #0056b3;
+}
+
+#map {
+    height: 300px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 8px;
+    display: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 50px;
+    border-top: 2px solid #0056b3;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-column, .right-column {
+        width: 100%;
+        padding: 0;
+    }
+
+    .left-column {
+        margin-bottom: 20px;
+        border-right: none;
+        border-bottom: 2px solid #007BFF;
+        padding-bottom: 20px;
+    }
+
+    section h2 {
+        font-size: 1.8em;
+    }
+}

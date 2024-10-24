@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Management - Shelter & Accommodation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/shelter.css')}}">
+  
+</head>
+<body>
+    <header>
+        <h1>Disaster Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shelter & Accommodation</a></li>
+                <li><a href="#">Emergency Services</a></li>
+                <li><a href="#">Updates</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+            <section id="emergency-contacts" class="card">
+                <h2>Emergency Contacts</h2>
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <h3>Relief Commissioner For Natural Calamities  </h3>
+                        <p>1070</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>NDRF HELPLINE NO</h3>
+                        <p>011-24363260 , 9711077372</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Disaster Management Services</h3>
+                        <p>108</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>POLICE </h3>
+                        <p>100 </p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>NATIONAL EMERGENCY NUMBER </h3>
+                        <p>112</p>
+                    </div>
+                </div>
+            </section>
+    
+            <section id="guidelines" class="card">
+                <h2>Shelter Guidelines</h2>
+                <ul>
+                    <li>Always adhere to the guidelines provided by shelter authorities and staff.</li>
+                    <li>Bring necessary items such as medications, important documents, personal identification, etc</li>
+                    <li>Adhere to health protocols.</li>
+                    <li>If you notice any safety concerns, health issues, or conflicts, report them to shelter staff immediately.</li>
+                    <li>Keep your belongings packed and be ready to move quickly if instructed by authorities to evacuate the shelter.</li>
+                </ul>
+            </section>
+    
+            <section id="available-shelters" class="card">
+                <h2>Available Shelters</h2>
+                <div id="shelter-list" class="shelter-grid"></div>
+            </section>
+        
+        
+
+       
+
+        <section id="shelter-request" class="card">
+            <h2>Request Shelter</h2>
+            <form id="shelter-form">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="Pincode">Pincode:</label>
+                    <input type="text" id="Pincode" name="Pincode" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="family-size">Family Size:</label>
+                    <input type="number" id="family-size" name="family-size" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="special-needs">Special Needs:</label>
+                    <textarea id="special-needs" name="special-needs" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn">Submit Request</button>
+            </form>
+        </section>
+
+        <section id="volunteer" class="card">
+            <h2>Volunteer Registration</h2>
+            <form id="volunteer-form">
+                <div class="form-group">
+                    <label for="volunteer-name">Full Name:</label>
+                    <input type="text" id="volunteer-name" name="volunteer-name" required>
+                </div>
+             
+                <div class="form-group">
+                    <label for="volunteer-phone">Phone Number:</label>
+                    <input type="tel" id="volunteer-phone" name="volunteer-phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="skills">Skills:</label>
+                    <select id="skills" name="skills" multiple required>
+                        <option value="medical">Medical</option>
+                        <option value="logistics">Logistics</option>
+                      
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="availability">Availability:</label>
+                    <input type="date" id="availability" name="availability" required>
+                </div>
+                <button type="submit" class="btn">Register as Volunteer</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Disaster Management System. All rights reserved.</p>
+    </footer>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_ACTUAL_API_KEY_HERE&callback=initMap" async defer></script>
+    <script src="{{url_for('static',filename='js/shelters.js')}}"></script>
+</body>
+</html>

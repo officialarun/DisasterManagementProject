@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Supplies - Disaster Management</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/food.css')}}" class="rel">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Food Supplies for Disaster Relief</h1>
+            <nav>
+                <ul>
+                    <li><a href="#mission">Mission</a></li>
+                    <li><a href="#provide">What We Provide</a></li>
+                    <li><a href="#operate">How We Operate</a></li>
+                    <li><a href="#get-involved">Get Involved</a></li>
+                    <li><a href="#request">Request</a></li>
+                    <li><a href="#updates">Updates</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="mission" class="card">
+            <h2><i class="fas fa-hand-holding-heart"></i> Our Mission</h2>
+            <p>
+                We are committed to providing timely and adequate food supplies to disaster-stricken regions, helping to sustain the health and well-being of those impacted. Our mission is to prevent hunger and malnutrition by ensuring that every person in need has access to safe and nutritious food.
+            </p>
+        </section>
+
+        <section id="provide" class="card">
+            <h2><i class="fas fa-utensils"></i> What We Provide</h2>
+            <ul>
+                <li><strong>Non-Perishable Food Items:</strong> Canned vegetables, fruits, and proteins; dry goods such as rice, pasta, and beans; ready-to-eat meals and snacks.</li>
+                <li><strong>Fresh Produce:</strong> Fruits and vegetables sourced from local suppliers; distribution based on availability and logistics.</li>
+                <li><strong>Infant and Child Nutrition:</strong> Baby formula and cereals; age-appropriate snacks and meals.</li>
+                <li><strong>Special Dietary Needs:</strong> Gluten-free, dairy-free, and other specialized food options; support for individuals with allergies or dietary restrictions.</li>
+            </ul>
+        </section>
+
+        <section id="operate" class="card">
+            <h2><i class="fas fa-cogs"></i> How We Operate</h2>
+            <p>
+                Our food supply chain is designed to be flexible and responsive. We collaborate with local authorities, NGOs, and community leaders to identify the most affected areas and distribute food accordingly. We also work with volunteers and local vendors to ensure that food reaches even the most remote locations.
+            </p>
+        </section>
+
+        <section id="get-involved" class="card">
+            <h2><i class="fas fa-hands-helping"></i> Get Involved</h2>
+            <p>
+                You can help us provide food supplies by:
+            </p>
+            <ul>
+                <li><strong>Donating Food:</strong> Contribute non-perishable food items at our designated collection centers.</li>
+                <li><strong>Volunteering:</strong> Join our team to help with the packing and distribution of food supplies.</li>
+                <li><strong>Financial Contributions:</strong> Your donations help us purchase fresh produce and specialized foods.</li>
+            </ul>
+        </section>
+
+        <section id="request" class="card">
+            <h2><i class="fas fa-pencil-alt"></i> Request Food Supplies</h2>
+            <form id="request-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="address" rows="4" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="quantity">Quantity Required:</label>
+                    <input type="number" id="quantity" name="quantity" required>
+                </div>
+                
+                <button type="submit" class="submit-btn">Submit Request</button>
+            </form>
+            <p id="form-response"></p>
+        </section>
+
+        <section id="map-section" class="card">
+            <h2><i class="fas fa-map-marker-alt"></i> Our Locations</h2>
+            <div id="map" style="height: 400px;"></div>
+        </section>
+
+        <section id="updates" class="card">
+            <h2><i class="fas fa-bell"></i> Real-Time Updates</h2>
+            <div id="updates"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Disaster Management Organization. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <button id="scrollToTop" title="Go to top"><i class="fas fa-chevron-up"></i></button>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="{{url_for('static',filename='js/food.js')}}"></script>
+</body>
+</html>

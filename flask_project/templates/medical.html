@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natural Disaster Health Hub</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/medical.css')}}">
+    
+</head>
+<body>
+    <header>
+        <h1>Natural Disaster Health Hub</h1>
+        <p>Your essential resource for health and safety during emergencies</p>
+    </header>
+
+    <div class="container">
+        
+        <aside class="left-column">
+            <nav>
+                <ul>
+                    <li><a href="#emergency-contacts">Emergency Contacts</a></li>
+                    <li><a href="#medication-tracker">Medication Tracker</a></li>
+                    <li><a href="#first-aid">First Aid Tips</a></li>
+                    <li><a href="#health-safety">Health & Safety</a></li>
+                    <li><a href="#medication-reminder">Medication Reminder</a></li>
+                    <li><a href="#symptom-checker">Symptom Checker</a></li>
+                    <li><a href="#emergency-kit">Emergency Kit</a></li>
+                    <li><a href="#patient-info">Patient Information</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        
+        <main class="right-column">
+            
+            <section id="emergency-contacts">
+                <h2>Emergency Contact Information</h2>
+                <p>Find the nearest emergency services, hospitals, and helplines.</p>
+                <div id="contact-list">
+                    
+                </div>
+                <div id="map"></div>
+            </section>
+
+           
+            <section id="medication-tracker">
+                <h2>Medication Availability Tracker</h2>
+                <input type="text" id="medication-search" placeholder="Search for medication...">
+                <div id="medication-results">
+                    
+                </div>
+            </section>
+
+            
+            <section id="first-aid">
+                <h2>First Aid Tips and Guides</h2>
+                <div class="first-aid-content">
+                    <p>Learn how to treat common injuries during emergencies.</p>
+                    <a href="first-aid.pdf" download>Download First Aid Guide (PDF)</a>
+                </div>
+            </section>
+
+           
+            <section id="health-safety">
+                <h2>Health and Safety Information</h2>
+                <div class="safety-tips">
+                    <h3>Disease Prevention</h3>
+                    <p>Guidelines to prevent diseases like cholera and dengue during disasters.</p>
+                </div>
+                <div class="mental-health">
+                    <h3>Mental Health Resources</h3>
+                    <p>Tips to manage stress, anxiety, and trauma after a disaster.</p>
+                </div>
+            </section>
+
+            
+            <section id="medication-reminder">
+                <h2>Medication Reminder Tool</h2>
+                <form id="reminder-form">
+                    <input type="text" placeholder="Medication Name">
+                    <input type="datetime-local" placeholder="Reminder Time">
+                    <button type="submit">Set Reminder</button>
+                </form>
+            </section>
+
+           
+            <section id="symptom-checker">
+                <h2>Symptom Checker</h2>
+                <form id="symptom-form">
+                    <input type="text" placeholder="Enter symptoms...">
+                    <button type="submit">Check Symptoms</button>
+                </form>
+            </section>
+
+            <section id="emergency-kit">
+                <h2>Emergency Kit Checklist</h2>
+                <form id="kit-form">
+                    <input type="checkbox" id="water" name="water">
+                    <label for="water">Water</label><br>
+                    <input type="checkbox" id="food" name="food">
+                    <label for="food">Food</label><br>
+                    <button type="submit">Download Checklist</button>
+                </form>
+            </section>
+
+        
+            <section id="patient-info">
+                <h2>Patient Information</h2>
+                <form id="patient-form">
+                    <input type="text" placeholder="Patient's Name" required>
+                    <input type="number" placeholder="Age" required>
+                    <textarea placeholder="Health Problems" rows="4" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Natural Disaster Health Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>

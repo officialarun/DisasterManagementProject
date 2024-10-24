@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    
+    
+</head>
+<body>
+   
+
+
+
+    <h1>New User</h1>
+    <ul id="users-list">
+        {% for user in data['users'] %}
+            <li>{{ user.name }} ({{ user.email }}) ({{ user.mobile}})</li>
+        {% endfor %}
+    </ul>
+
+    
+
+
+
+   </div>
+</body>
+</html>

@@ -1,0 +1,297 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/flex-style.css')}}" class="rel">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/jscript.css')}}" class="rel">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/counter.css')}}" class="rel">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/footer.css')}}" class="rel">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <title>Animated site Design</title>
+</head>
+<body>
+
+   
+    <div class="trunk">
+        <div class="navbar">
+            <div id="breaking-news-container">
+                <div id="breaking-news-colour" class="slideup animated">
+                </div>
+                <span class="breaking-news-title delay-animated slidein">
+                    BREAKING
+                  </span>
+                <a class="breaking-news-headline delay-animated2 fadein marquee">
+                    All pilgrims and tourists are requested to avoid travelling to Joshimath (KedarNath). A landlside has been reported taking toll on lives of as many as 13 people.
+                  </a>
+              </div> 
+        </div>
+        
+        
+
+        
+        <div class="helpdesk">
+            <h3 class="help">Need Help?</h3>
+            <p>Here to assist.</p>
+            <button onclick="alert('Help is on the way!')">Get Help</button>
+        </div>
+        <div class="hero">
+            <nav>
+                <img src="{{url_for('static',filename='images/wb_logo.png')}}" alt="" class="logo">
+                <ul>
+                    <li><a href="#" class="href">Features</a></li>
+                    <li><a href="#" class="href">How it Works</a></li>
+                    <li><a href="#" class="href">Privacy</a></li>
+                    <li><a href="{{url_for('shelter')}}" class="href">Volunteer</a></li>
+                    <li><a href="{{url_for('food_supply')}}" class="href">Food&Shelter</a></li>
+
+                </ul>
+                <div class="accessories">
+                    <a href="#" class="login-btn">Log in</a>
+                    <a href="#" class="btn">Download App</a>
+                </div>
+            </nav>
+            <div class="content">
+                <h1 class="white_color">You can count</h1>
+                <h1 class="white_color">On</h1>
+                <h1 class="white_color" >Us</h1>
+                <p class="anim">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus, minus.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio quaerat ducimus possimus velit, voluptate. <esse class="lorem10"></esse></p>
+                <a href="#" class="btn">Join Now</a>
+            </div>
+          
+    
+        </div>
+       
+    
+        <div class="important_container">
+            <hr class="h">
+            
+            <div class="important">
+                
+                <div class="important-q">
+                   <h2 ><a href="{{url_for('rescue')}}" class="no_decor">Do you need Immediate Rescue?</a></h1>
+                    <h3 ><a href="{{url_for('medical')}}" class="no_decor">Medical Assistance?</a></h2>
+                    <h4 ><a href="{{url_for('lost_one')}}" class="no_decor">Lost a Loved one?</a></h3>
+                    <h5 ><a href="{{url_for('shelter')}}" class="no_decor">Shelter/Accomodation</a></h4>
+                    <h5 ><a href="{{url_for('food_supply')}}" class="no_decor">Food & Supplies</a></h5>
+                </div>
+                
+            </div>
+        </div>
+       
+         <div class="wetaher">
+            <a class="weatherwidget-io" href="https://forecast7.com/en/20d5978d96/india/" data-label_2="WEATHER" data-theme="original" >WEATHER</a>
+    <script>
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+    </script>
+         </div>
+    
+        <div class="counter">
+            <div class="counter-container">
+                <h2 id="title">Total Saved Lives</h2>
+                <h4>Join us in this initiative to reach out to the disaster affected regions and help us rescue people a</h4>
+        
+                {# <button id="counter-btn" class="counter-btn" onclick="joined()">2210</button> #}
+                <h1 id="count">0</h1>
+           </div>
+           <hr class="vertical-hr">
+           
+           <div class="counter-container">
+            <h1 id="counter">0</h1>
+            <h2 id="title">Wanna Volunteer ?</h2>
+            <p>Our Volunteers are continuosly increasing !! JOIN NOW !!</p>
+        
+            
+            </div>
+            <script src="{{url_for('static',filename='js/counter.js')}}"></script>
+        </div>
+    
+       
+    
+    
+        
+        <div class="greatest">
+            
+    
+            <hr class="h">
+        
+    
+            <div class="donation">
+                <div class="box1-left">
+                    <div class="box1-left-content">
+                        <h2 id="result">DONATE NOW!!                            
+                        <hr class="h_qr">
+                        <img src="{{url_for('static',filename='images/qrcode.jpeg')}}" alt="A beautiful landscape" class="qrcode">
+                        </h2>
+                    </div>
+                </div>
+                <hr class="vertical-hr">
+                <div class="box1-right">  
+                    <div class="box1-right-cont">
+                        <div class="flex">
+                            <input type="text" id="amount" placeholder="Enter the amount">
+                            <input type="text" id="persons" placeholder="Enter your name">
+                            <input type="text" id="persons" placeholder="Enter your name">
+                        </div>
+                        <button class="container-btn" onclick="split()">Submit</button>
+                    </div>              
+                    
+                </div>
+                <script src="{{url_for('static',filename='js/app.js')}}"></script> 
+        
+            </div>
+    
+           
+            <hr class="last_hr">
+              
+        
+            {#
+             <div class="flexbox">
+                <div class="card">
+                   <div class="card-header">
+                    <img src="{{url_for('static',filename='images/sih_image_1.jpg')}}" alt="" class="card-img">
+                    <div class="try">
+                        <p>Statistics</p>
+                       
+                    </div>
+                   
+                   </div>
+                    <h3>Food & Supply</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="card">
+                    <img src="{{url_for('static',filename='images/sih_image_1.jpg')}}" alt="" class="card-img">
+                   
+                    <h3>Shelter and Accomodation</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="card">
+                    <img src="{{url_for('static',filename='images/sih_image_1.jpg')}}" alt="" class="card-img">
+                 
+                    <h3>Health Tracking</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="card">
+                    <img src="{{url_for('static',filename='images/sih_image_1.jpg')}}" alt="" class="card-img">
+                 
+                    <h3>Interact</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+               
+             </div> #}
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-container">
+            <div class="footer">
+              <div class="footer-content">
+                <div class="newsletter">
+                  <h2>Subscribe to Our Newsletter</h2>
+                  <div class="newsletter-form">
+                    <input class="newsletter-input" placeholder="Email here" />
+                    <button class="newsletter-btn">Submit</button>
+                  </div>
+                </div>
+                <div class="footer-row">
+                  <div class="footer-column">
+                    <div class="footer-about">
+                      <h3>About Us</h3>
+        
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla a consectetur dictum, metus elit hendrerit lectus, et venenatis elit dui nec lorem. Integer vel urna euismod, ultrices tortor at, fringilla est. Donec luctus massa a dolor maximus, nec pharetra felis gravida. Ut at ex nec orci fringilla vehicula. Fusce sagittis enim nec sapien cursus, nec consectetur arcu ultricies. Aliquam erat volutpat. Sed nec orci vehicula, dignissim est a, cursus ex. Suspendisse potenti. Integer lacinia urna eget libero interdum, eu luctus ligula gravida.
+                      </p>
+        
+                    </div>
+                  </div>
+        
+                  <div class="footer-column">
+                    <div class="footer-links">
+                      <h3>Useful Links</h3>
+                      <a href="/">Home</a>
+                      <a href="/aboutus">About</a>
+                      <a href="/services">Products & Services</a>
+                      <a href="#">Client Testimonials</a>
+                      <a href="/contact">Contact Us</a>
+                    </div>
+                  </div>
+                  <div class="footer-column">
+                    <div class="footer-links">
+                      <h3>Service Area</h3>
+                      <a href="#">Rice Milling Technology Solutions</a>
+                      <a href="#">Industrial Power Solutions</a>
+                      <a href="#">Static Voltage Stabilizers</a>
+                    </div>
+                  </div>
+                  <div class="footer-column">
+                    <div class="footer-contact">
+                      <h3>Get In Touch</h3>
+                      <p>
+                        <i class="fa fa-map-marker" aria-hidden="true"></i> Hyderabad, Telangana 500045
+                      </p>
+                      <p>
+                        <i class="fa fa-phone" aria-hidden="true"></i> +91 8008146642
+                      </p>
+                      <p>
+                        <i class="fa fa-envelope"></i> abcd@example.com
+                      </p>
+                      <div class="footer-social">
+                        <!-- Uncomment and add links if needed
+                        <a href="#">
+                          <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#">
+                          <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#">
+                          <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#">
+                          <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#">
+                          <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="footer-menu">
+                <div class="f-menu">
+                  <a href="#">Terms of Use</a>
+                  <a href="#">Privacy Policy</a>
+                  <a href="#">Cookies</a>
+                  <a href="#">Help</a>
+                  <a href="#">FAQs</a>
+                </div>
+              </div>
+              <div class="footer-copyright">
+                <div class="footer-row">
+                  <div class="footer-column">
+                    <p>
+                      &copy; <a href="#">Annapurna Trading Corporation</a>, All Rights
+                      Reserved.
+                    </p>
+                  </div>
+                  <div class="footer-column">
+                    <p>
+                      Developed & Maintained By
+                      <a href="#">R.Tech Solutions</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+    </div>
+    
+   
+   
+</body>
+</html>
